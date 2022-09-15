@@ -35,7 +35,7 @@ async function createAsset(){
             if(sendSignedTx()) {
                 //Forcing testnet only to prevent accidental mainnet calls
                 AlgoSigner.send({
-                    ledger: 'TestNet',
+                    ledger: 'MainNet',
                     tx: d.blob
                 }).then((tx) =>{
                     selfLog(`Transaction Sent: ${JSON.stringify(tx,toJsonReplace,1)}`,'good');
@@ -78,7 +78,7 @@ async function modifyAsset(){
             if(sendSignedTx()) {
                 //Forcing testnet only to prevent accidental mainnet calls
                 AlgoSigner.send({
-                    ledger: 'TestNet',
+                    ledger: 'MainNet',
                     tx: d.blob
                 }).then((tx) =>{
                     selfLog(`Transaction Sent: ${JSON.stringify(tx,toJsonReplace,1)}`,'good');

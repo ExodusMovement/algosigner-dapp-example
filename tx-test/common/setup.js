@@ -8,7 +8,7 @@ let hideDebugMsgs = true;
 
 async function statusCheck(){
     await AlgoSigner.algod({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: '/v2/status'
     })
     .then((d) => {  
@@ -19,8 +19,8 @@ async function statusCheck(){
         selfLog(JSON.stringify(e));
     });
 }
-async function getTestNetSpecificAccount(address){
-    await AlgoSigner.accounts({ledger: 'TestNet'}).then((d) => {
+async function getMainNetSpecificAccount(address){
+    await AlgoSigner.accounts({ledger: 'MainNet'}).then((d) => {
         if(d && d.length > 0){
             try {        
                 account = d.find(acc => acc.address === address);
@@ -39,8 +39,8 @@ async function getTestNetSpecificAccount(address){
     });
 }
 
-async function getTestNetPrimaryAccount(){
-    await AlgoSigner.accounts({ledger: 'TestNet'})
+async function getMainNetPrimaryAccount(){
+    await AlgoSigner.accounts({ledger: 'MainNet'})
     .then((d) => {
         if(d && d.length > 0){
             const accountNumber = 0;
@@ -58,7 +58,7 @@ async function getTestNetPrimaryAccount(){
 
 async function getParams(){
     await AlgoSigner.algod({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: '/v2/transactions/params'
     })
     .then((d) => {
@@ -98,10 +98,10 @@ async function setupTx(params){
         await getParams();
     }).then(async () => {     
         if(address) {
-            await getTestNetSpecificAccount(address);
+            await getMainNetSpecificAccount(address);
         } 
         else {
-            await getTestNetPrimaryAccount();
+            await getMainNetPrimaryAccount();
         }
     })
     

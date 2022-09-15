@@ -25,7 +25,7 @@ async function freezeAsset(){
             if(sendSignedTx()) {
                 //Forcing testnet only to prevent accidental mainnet calls
                 AlgoSigner.send({
-                    ledger: 'TestNet',
+                    ledger: 'MainNet',
                     tx: primaryBlob
                 }).then((tx) =>{
                     selfLog(`Transaction Sent: ${JSON.stringify(tx,toJsonReplace,1)}`,'good');

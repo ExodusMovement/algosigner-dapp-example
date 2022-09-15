@@ -36,7 +36,7 @@ async function acceptAsset() {
         if (sendSignedTx()) {
             //Forcing testnet only to prevent accidental mainnet calls
             AlgoSigner.send({
-            ledger: "TestNet",
+            ledger: "MainNet",
             tx: d.blob,
             })
             .then((tx) => {
@@ -97,7 +97,7 @@ async function closeAsset() {
         if (sendSignedTx()) {
             //Forcing testnet only to prevent accidental mainnet calls
             AlgoSigner.send({
-            ledger: "TestNet",
+            ledger: "MainNet",
             tx: d.blob,
             })
             .then((tx) => {
@@ -171,7 +171,7 @@ async function transferAsset() {
         if (sendSignedTx()) {
             //Forcing testnet only to prevent accidental mainnet calls
             AlgoSigner.send({
-            ledger: "TestNet",
+            ledger: "MainNet",
             tx: primaryBlob,
             })
             .then((tx) => {
@@ -236,7 +236,7 @@ async function clawbackAsset() {
         if (sendSignedTx()) {
             //Forcing testnet only to prevent accidental mainnet calls
             AlgoSigner.send({
-            ledger: "TestNet",
+            ledger: "MainNet",
             tx: primaryBlob,
             })
             .then((tx) => {

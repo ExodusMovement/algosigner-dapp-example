@@ -106,7 +106,7 @@ async function createGroupPayTx() {
         // Use AlgoSigner to send this grouped atomic transaction to the Algorand test netork
         if(sendSignedTx()) {
             AlgoSigner.send({
-                ledger: 'TestNet',
+                ledger: 'MainNet',
                 tx: grouped_txns
             }).then((tx) =>{
                 selfLog(JSON.stringify(tx),'good');

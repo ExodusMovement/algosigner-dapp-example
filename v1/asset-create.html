@@ -75,7 +75,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Get TestNet Accounts
+        Get MainNet Accounts
         <a class="button is-small is-pulled-right" target="_blank" rel="noopener noreferrer"
           href="https://github.com/PureStake/algosigner-dapp-example/blob/master/asset-create.html#L354">
           <span class="icon is-small">
@@ -85,7 +85,7 @@
         </a>
       </h1>
       <p class="subtitle">
-        Gets the users TestNet accounts
+        Gets the users MainNet accounts
       </p>
 
       <div class="columns">
@@ -95,7 +95,7 @@
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.accounts({
-  ledger: 'TestNet'
+  ledger: 'MainNet'
 })
 .then((d) => {
   accounts = d;
@@ -123,7 +123,7 @@
         </a>
       </h1>
       <p class="subtitle">
-        Query AlgoD to get TestNet suggested TX parameters
+        Query AlgoD to get MainNet suggested TX parameters
       </p>
 
       <div class="columns">
@@ -133,7 +133,7 @@
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.algod({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: '/v2/transactions/params'
 })
 .then((d) => {
@@ -275,7 +275,7 @@
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.send({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   tx: signedTx.blob
 })
 .then((d) => {
@@ -314,7 +314,7 @@
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.algod({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: '/v2/transactions/pending/' + tx.txId
 })
 .then((d) => {
@@ -365,7 +365,7 @@
       let accountsCodeElem = document.getElementById('accounts-code');
 
       AlgoSigner.accounts({
-        ledger: 'TestNet'
+        ledger: 'MainNet'
       })
         .then((d) => {
           accountsCodeElem.innerHTML = JSON.stringify(d, null, 2);
@@ -394,7 +394,7 @@
       let paramsCodeElem = document.getElementById('params-code');
 
       AlgoSigner.algod({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: '/v2/transactions/params'
       })
         .then((d) => {
@@ -445,7 +445,7 @@
       let sendCodeElem = document.getElementById('send-code');
 
       AlgoSigner.send({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         tx: signedTx.blob
       })
         .then((d) => {
@@ -465,7 +465,7 @@
       let pendingCodeElem = document.getElementById('pending-code');
 
       AlgoSigner.algod({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: '/v2/transactions/pending/' + tx.txId
       })
         .then((d) => {

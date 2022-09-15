@@ -1,7 +1,7 @@
 async function sendGroupedBlobs(blobs){
     for(i in blobs) {
         await AlgoSigner.send({
-            ledger: 'TestNet',
+            ledger: 'MainNet',
             tx: blobs[i]
         }).then((txns) =>{
             selfLog(`Transactions Sent: ${JSON.stringify(txns,toJsonReplace,1)}`,'good');

@@ -118,7 +118,7 @@ algodClient.healthCheck().do()
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Get TestNet Accounts
+        Get MainNet Accounts
         <a class="button is-small is-pulled-right" target="_blank" rel="noopener noreferrer"
           href="https://github.com/PureStake/algosigner-dapp-example/blob/master/asset-create.html#L354">
           <span class="icon is-small">
@@ -128,7 +128,7 @@ algodClient.healthCheck().do()
         </a>
       </h1>
       <p class="subtitle">
-        Gets the users TestNet accounts
+        Gets the users MainNet accounts
       </p>
 
       <div class="columns">
@@ -138,7 +138,7 @@ algodClient.healthCheck().do()
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.accounts({
-  ledger: 'TestNet'
+  ledger: 'MainNet'
 })
 .then((d) => {
   accounts = d;
@@ -166,7 +166,7 @@ algodClient.healthCheck().do()
         </a>
       </h1>
       <p class="subtitle">
-        Query AlgoD to get TestNet suggested TX parameters
+        Query AlgoD to get MainNet suggested TX parameters
       </p>
 
       <div class="columns">
@@ -315,7 +315,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.send({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   tx: signedTxs[0].blob
 })
 .then((d) => {
@@ -354,7 +354,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.algod({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: '/v2/transactions/pending/' + tx.txId
 })
 .then((d) => {
@@ -424,7 +424,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
       let accountsCodeElem = document.getElementById('accounts-code');
 
       AlgoSigner.accounts({
-        ledger: 'TestNet'
+        ledger: 'MainNet'
       })
       .then((d) => {
         accountsCodeElem.innerHTML = JSON.stringify(d, null, 2);
@@ -501,7 +501,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
 
       // Sending first transaction only for demo purposes
       AlgoSigner.send({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         tx: signedTxs[0].blob
       })
       .then((d) => {

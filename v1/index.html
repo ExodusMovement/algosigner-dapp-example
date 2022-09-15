@@ -105,7 +105,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Get TestNet Accounts
+        Get MainNet Accounts
         <a class="button is-small is-pulled-right" target="_blank" rel="noopener noreferrer" href="https://github.com/PureStake/algosigner-dapp-example/blob/master/index.html#L277">
           <span class="icon is-small">
             <i class="fab fa-github"></i>
@@ -114,7 +114,7 @@
         </a>
       </h1>
       <p class="subtitle">
-        Gets the users TestNet accounts
+        Gets the users MainNet accounts
       </p>
 
       <div class="columns">
@@ -124,7 +124,7 @@
         </div>
         <div class="column">
 <pre><code class="js"><b>AlgoSigner</b>.accounts({
-  ledger: 'TestNet'
+  ledger: 'MainNet'
 })
 .then((d) => {
   document.getElementById('accounts-code').innerHTML = JSON.stringify(d);
@@ -152,7 +152,7 @@
         </a>
       </h1>
       <p class="subtitle">
-        Query AlgoD to get TestNet status
+        Query AlgoD to get MainNet status
       </p>
 
       <div class="columns">
@@ -162,7 +162,7 @@
         </div>
         <div class="column">
 <pre><code class="js"><b>AlgoSigner</b>.algod({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: '/v2/status'
 })
 .then((d) => {
@@ -191,7 +191,7 @@
         </a>
       </h1>
       <p class="subtitle">
-        Query Indexer to get TestNet assets
+        Query Indexer to get MainNet assets
       </p>
 
       <div class="columns">
@@ -220,7 +220,7 @@
 const limit = document.getElementById('limit').value;
 
 AlgoSigner.indexer({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: `/v2/assets?name=${name}&limit=${limit}`,
 })
 .then((d) => {
@@ -278,7 +278,7 @@ AlgoSigner.indexer({
       let accountsCodeElem = document.getElementById('accounts-code');
 
       AlgoSigner.accounts({
-        ledger: 'TestNet'
+        ledger: 'MainNet'
       })
       .then((d) => {
         accounts = d;
@@ -297,7 +297,7 @@ AlgoSigner.indexer({
       let statusCodeElem = document.getElementById('status-code');
 
       AlgoSigner.algod({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: '/v2/status'
       })
       .then((d) => {
@@ -319,7 +319,7 @@ AlgoSigner.indexer({
       const limit = document.getElementById('limit').value;
 
       AlgoSigner.indexer({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         path: `/v2/assets?name=${name}&limit=${limit}`,
       })
       .then((d) => {

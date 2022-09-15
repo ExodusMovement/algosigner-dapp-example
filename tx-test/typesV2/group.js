@@ -120,7 +120,7 @@ async function createGroupPayTx() {
             const grouped_txns_64b = btoa(String.fromCharCode.apply(null, combined_decoded_txns));
     
             AlgoSigner.send({
-                ledger: 'TestNet',
+                ledger: 'MainNet',
                 tx: grouped_txns_64b
             }).then((tx) =>{
                 selfLog(JSON.stringify(tx,toJsonReplace,1),'good');

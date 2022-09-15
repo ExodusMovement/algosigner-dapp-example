@@ -205,7 +205,7 @@ async function createMultisigTx() {
         // Use AlgoSigner to send this multisig, fully signed transaction to the Algorand test network
         if(signedBlob !== undefined && sendSignedTx()) {        
             AlgoSigner.send({
-                ledger: 'TestNet',
+                ledger: 'MainNet',
                 tx: signedBlob 
             }).then((tx) =>{
                 selfLog(JSON.stringify(tx,_toJsonReplace,0),'good');

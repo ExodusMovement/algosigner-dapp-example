@@ -120,7 +120,7 @@ algodClient.healthCheck().do()
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Get TestNet Accounts
+        Get MainNet Accounts
         <a class="button is-small is-pulled-right" target="_blank" rel="noopener noreferrer"
           href="https://github.com/PureStake/algosigner-dapp-example/blob/master/asset-optin.html#L392">
           <span class="icon is-small">
@@ -130,7 +130,7 @@ algodClient.healthCheck().do()
         </a>
       </h1>
       <p class="subtitle">
-        Gets the users TestNet accounts
+        Gets the users MainNet accounts
       </p>
 
       <div class="columns">
@@ -140,7 +140,7 @@ algodClient.healthCheck().do()
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.accounts({
-  ledger: 'TestNet'
+  ledger: 'MainNet'
 })
 .then((d) => {
   accounts = d;
@@ -168,7 +168,7 @@ algodClient.healthCheck().do()
         </a>
       </h1>
       <p class="subtitle">
-        Query AlgoD to get TestNet suggested TX Params
+        Query AlgoD to get MainNet suggested TX Params
       </p>
 
       <div class="columns">
@@ -204,7 +204,7 @@ algodClient.healthCheck().do()
         </a>
       </h1>
       <p class="subtitle">
-        Query Indexer to get TestNet assets
+        Query Indexer to get MainNet assets
       </p>
 
       <div class="columns">
@@ -233,7 +233,7 @@ algodClient.healthCheck().do()
 const limit = document.getElementById('limit').value;
 
 <b>AlgoSigner</b>.indexer({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: `/v2/assets?name=${name}&limit=${limit}`,
 })
 .then((d) => {
@@ -355,7 +355,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.send({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   tx: signedTxs[0].blob
 })
 .then((d) => {
@@ -394,7 +394,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
         </div>
         <div class="column">
           <pre><code class="js"><b>AlgoSigner</b>.algod({
-  ledger: 'TestNet',
+  ledger: 'MainNet',
   path: '/v2/transactions/pending/' + tx.txId
 })
 .then((d) => {
@@ -468,7 +468,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
       let accountsCodeElem = document.getElementById('accounts-code');
 
       AlgoSigner.accounts({
-        ledger: 'TestNet'
+        ledger: 'MainNet'
       })
       .then((d) => {
         accountsCodeElem.innerHTML = JSON.stringify(d, null, 2);
@@ -576,7 +576,7 @@ const txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
 
       // Sending first transaction only for demo purposes
       AlgoSigner.send({
-        ledger: 'TestNet',
+        ledger: 'MainNet',
         tx: signedTxs[0].blob
       })
       .then((d) => {
