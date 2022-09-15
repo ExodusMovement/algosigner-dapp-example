@@ -1,6 +1,6 @@
 {
     "token": {
-        "X-API-Key": ""
+        "x-algo-api-token": ""
     },
     "server": "",
     "port": ""

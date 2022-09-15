@@ -61,7 +61,7 @@
             <div class="column">
                 <button class="button is-primary is-fullwidth" id="sdksetupv1">V1 Setup SDK</button>
                 <pre><code class="js">const algodServer = 'https://algo.a.exodus.io/';
-const token = { 'X-API-Key': 'YOUR API KEY HERE' };
+const token = { 'x-algo-api-token': 'YOUR API KEY HERE' };
 
 algodClient = new algosdk.Algodv2(token, algodServer, '');
 
@@ -72,7 +72,7 @@ algodClient.status().do()
             <div class="column">
                 <button class="button is-primary is-fullwidth" id="sdksetupv2">V2 Setup SDK</button>
                 <pre><code class="js">const algodServer = 'https://algo.a.exodus.io/';
-const token = { 'X-API-Key': 'YOUR API KEY HERE' };
+const token = { 'x-algo-api-token': 'YOUR API KEY HERE' };
 
 algodClient = new algosdk.Algodv2(token, algodServer, '');
 
@@ -318,7 +318,7 @@ let txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
         function sdkSetup() {
             let sdkSetupCodeElem = document.getElementById('sdk-setup');
             const server = 'https://algo.a.exodus.io/';
-            const token = { 'X-API-Key': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052' };
+            const token = { 'x-algo-api-token': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052' };
 
             algodClient = new algosdk.Algodv2(token, server, '');
             

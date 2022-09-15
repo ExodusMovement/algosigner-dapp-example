@@ -127,7 +127,7 @@
       <div class="column">
         <pre><code class="js">const algodServer = 'https://algo.a.exodus.io/'
 const indexerServer = 'https://algo-api.a.exodus.io/'
-const token = { 'X-API-Key': 'YOUR API KEY HERE' }
+const token = { 'x-algo-api-token': 'YOUR API KEY HERE' }
 const port = '';
 
 algodClient = new algosdk.Algodv2(token, algodServer, port);
@@ -351,7 +351,7 @@ indexerClient.searchForAssets()
 
       const algodServer = 'https://algo.a.exodus.io/';
       const indexerServer = 'https://algo-api.a.exodus.io/';
-      const token = { 'X-API-Key': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052' }
+      const token = { 'x-algo-api-token': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052' }
       const port = '';
 
       algodClient = new algosdk.Algodv2(token, algodServer, port);

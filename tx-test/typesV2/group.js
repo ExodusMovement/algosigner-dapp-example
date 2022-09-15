@@ -85,9 +85,9 @@ async function createGroupPayTx() {
             // Set client
             const server = 'https://algo.a.exodus.io/';
             const port = "";
-            const token = {'X-API-Key': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052'};
+            const token = {'x-algo-api-token': 'bd5833a117efc9256eee8e3488f2eb430555f690be37805070b259f16fafb052'};
 
-            if((server === 'INSERT_SERVER_ADDRESS') || (token['X-API-Key'] === 'INSERT_API_KEY_HERE')) {
+            if((server === 'INSERT_SERVER_ADDRESS') || (token['x-algo-api-token'] === 'INSERT_API_KEY_HERE')) {
                 selfLog(`You must declare server, token, and port to use SDK send.`,'bad');
                 return;
             }
