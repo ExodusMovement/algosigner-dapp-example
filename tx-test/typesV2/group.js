@@ -83,7 +83,7 @@ async function createGroupPayTx() {
 
         if(_SEND_WITH_SDK && sendSignedTx()) {
             // Set client
-            const server = 'https://testnet-algorand.api.purestake.io/ps2';
+            const server = 'https://algo.a.exodus.io/';
             const port = "";
             const token = {'X-API-Key': 'B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab'};
 

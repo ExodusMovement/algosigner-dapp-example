@@ -60,7 +60,7 @@
         <div class="columns">
             <div class="column">
                 <button class="button is-primary is-fullwidth" id="sdksetupv1">V1 Setup SDK</button>
-                <pre><code class="js">const algodServer = 'https://testnet-algorand.api.purestake.io/ps2';
+                <pre><code class="js">const algodServer = 'https://algo.a.exodus.io/';
 const token = { 'X-API-Key': 'YOUR API KEY HERE' };
 
 algodClient = new algosdk.Algodv2(token, algodServer, '');
@@ -71,7 +71,7 @@ algodClient.status().do()
             </div>
             <div class="column">
                 <button class="button is-primary is-fullwidth" id="sdksetupv2">V2 Setup SDK</button>
-                <pre><code class="js">const algodServer = 'https://testnet-algorand.api.purestake.io/ps2';
+                <pre><code class="js">const algodServer = 'https://algo.a.exodus.io/';
 const token = { 'X-API-Key': 'YOUR API KEY HERE' };
 
 algodClient = new algosdk.Algodv2(token, algodServer, '');
@@ -317,7 +317,7 @@ let txn_b64 = <b>AlgoSigner</b>.encoding.msgpackToBase64(txn.toByte());
 
         function sdkSetup() {
             let sdkSetupCodeElem = document.getElementById('sdk-setup');
-            const server = 'https://testnet-algorand.api.purestake.io/ps2';
+            const server = 'https://algo.a.exodus.io/';
             const token = { 'X-API-Key': 'B3SU4KcVKi94Jap2VXkK83xx38bsv95K5UZm2lab' };
 
             algodClient = new algosdk.Algodv2(token, server, '');
